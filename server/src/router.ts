@@ -18,6 +18,13 @@ import sayActions from "./modules/say/sayActions";
 router.get("/", sayActions.sayWelcome);
 
 router.get("/api/programs", programActions.browse);
+router.get("/api/programs/:id", programActions.read);
+
+// GET /api/categories qui renvoie la liste des catégories.
+// GET /api/categories/:id qui renvoie une catégorie en particulier.
+import categoryActions from "./modules/category/categoryActions";
+router.get("/api/categories", categoryActions.browse);
+router.get("/api/categories/:id", categoryActions.read);
 
 /* ************************************************************************* */
 
